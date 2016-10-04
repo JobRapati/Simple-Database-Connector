@@ -54,7 +54,7 @@ class dbconnect
         }
     }
 
-    function selectwith(array $columns, $table, $columntocheck, $value)
+    function selectwhere(array $columns, $table, $columntocheck, $value)
     {
         if($this->con == null)
         {
