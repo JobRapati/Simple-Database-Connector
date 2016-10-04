@@ -32,7 +32,7 @@ class dbconnect
         $query = "";
         for ($i = 0; $i < count($columns); $i++)
         {
-            if(strlen($query) == 0)
+            if (strlen($query) == 0)
                 $query = $columns[$i];
             else
                 $query = $query . ", " . $columns[$i];
@@ -53,4 +53,36 @@ class dbconnect
             $this->qresult[$i] = $variables[$i];
         }
     }
+<<<<<<< HEAD
 }
+=======
+
+    function selectwhere(array $columns, $table, $columntocheck, $value)
+    {
+        if($this->con == null)
+        {
+            throw new ErrorException("No connection is set. Please use the connect function first");
+            return;
+        }
+
+        $query = "";
+        for($i = 0; $i < count($columns); $i++)
+        {
+            if(strlen($query) == 0)
+                $query = $columns[$i];
+            else
+                $query = $query . ", " . $columns;
+        }
+        $sql = "SELECT $query FROM $table WHERE $columntocheck=$value";
+        $result = mysqli_query($this->con, $sql);
+        $row = mysqli_fetch_assoc($result);
+
+        $variables = array();
+        for($i = 0; $i < count($row); $i++)
+            array_push($variables, $row[$columns[$i]]);
+
+        for($i = 0; $i < count($variables); $i++)
+            $this->qresult = $variables[$i];
+    }
+}
+>>>>>>> refs/remotes/origin/Small-expansion
