@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c677c10d-f969-43bc-b0ea-307a0e811e52" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/connect.php" afterPath="$PROJECT_DIR$/connect.php" />
     </list>
     <ignored path="Simple-Database-Connector.iws" />
@@ -29,24 +27,32 @@
       <file leaf-file-name="connect.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/connect.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="549">
-              <caret line="130" column="32" selection-start-line="130" selection-start-column="32" selection-end-line="130" selection-end-column="32" />
+            <state relative-caret-position="1229">
+              <caret line="249" column="1" selection-start-line="249" selection-start-column="1" selection-end-line="249" selection-end-column="1" />
               <folding>
-                <marker date="1476703728107" expanded="true" signature="1007:1026" ph="SELECT ${$qu... ${$table}" />
-                <marker date="1476703728107" expanded="true" signature="1939:1986" ph="SELECT ${$qu... ${$table}" />
-                <marker date="1476703728107" expanded="true" signature="2891:2909" ph="SELECT ${$qu... " />
-                <marker date="1476703728107" expanded="true" signature="2891:2910" ph="SELECT ${$qu... ${$table}" />
-                <marker date="1476703728107" expanded="true" signature="2891:2926" ph="SELECT ${$qu... ${$table}" />
-                <marker date="1476703728107" expanded="true" signature="2891:2945" ph="SELECT ${$qu... ${$table}" />
-                <marker date="1476703728107" expanded="true" signature="3007:3038" ph="SELECT ${$qu... ${$table}" />
-                <marker date="1476703728107" expanded="true" signature="3007:3042" ph="SELECT ${$qu... ${$table}" />
-                <marker date="1476703728107" expanded="true" signature="3007:3062" ph="SELECT ${$qu... ${$table}" />
-                <marker date="1476703728107" expanded="true" signature="3975:3994" ph="SELECT ${$qu... ${$table}" />
-                <marker date="1476703728107" expanded="true" signature="3975:4007" ph="SELECT ${$qu... ${$table}" />
-                <marker date="1476703728107" expanded="true" signature="3975:4008" ph="SELECT ${$qu... ${$table}" />
-                <marker date="1476703728107" expanded="true" signature="3975:4022" ph="SELECT ${$qu... ${$table}" />
-                <marker date="1476703728107" expanded="true" signature="3975:4057" ph="SELECT ${$qu... ${$table}" />
-                <marker date="1476703728107" expanded="true" signature="4093:4176" ph="SELECT ${$qu... ${$table}" />
+                <marker date="1476710953187" expanded="true" signature="1041:1060" ph="SELECT ${$qu... ${$table}" />
+                <marker date="1476710953187" expanded="true" signature="1933:1980" ph="SELECT ${$qu... ${$table}" />
+                <marker date="1476710953187" expanded="true" signature="2845:2863" ph="SELECT ${$qu... " />
+                <marker date="1476710953187" expanded="true" signature="2845:2864" ph="SELECT ${$qu... ${$table}" />
+                <marker date="1476710953187" expanded="true" signature="2845:2880" ph="SELECT ${$qu... ${$table}" />
+                <marker date="1476710953187" expanded="true" signature="2845:2899" ph="SELECT ${$qu... ${$table}" />
+                <marker date="1476710953187" expanded="true" signature="2967:2998" ph="SELECT ${$qu... ${$table}" />
+                <marker date="1476710953187" expanded="true" signature="2967:3002" ph="SELECT ${$qu... ${$table}" />
+                <marker date="1476710953187" expanded="true" signature="2967:3022" ph="SELECT ${$qu... ${$table}" />
+                <marker date="1476710953187" expanded="true" signature="3896:3915" ph="SELECT ${$qu... ${$table}" />
+                <marker date="1476710953187" expanded="true" signature="3896:3928" ph="SELECT ${$qu... ${$table}" />
+                <marker date="1476710953187" expanded="true" signature="3896:3929" ph="SELECT ${$qu... ${$table}" />
+                <marker date="1476710953187" expanded="true" signature="3896:3943" ph="SELECT ${$qu... ${$table}" />
+                <marker date="1476710953187" expanded="true" signature="3896:3978" ph="SELECT ${$qu... ${$table}" />
+                <marker date="1476710953187" expanded="true" signature="4020:4103" ph="SELECT ${$qu... ${$table}" />
+                <marker date="1476710953187" expanded="true" signature="5462:5492" ph="UPDATE ${$ta... " />
+                <marker date="1476710953187" expanded="true" signature="5462:5493" ph="UPDATE ${$ta... " />
+                <marker date="1476710953187" expanded="true" signature="5462:5508" ph="UPDATE ${$ta... " />
+                <marker date="1476710953187" expanded="true" signature="7387:7399" ph="DELETE FROM " />
+                <marker date="1476710953187" expanded="true" signature="7387:7411" ph="DELETE FROM " />
+                <marker date="1476710953187" expanded="true" signature="7387:7412" ph="DELETE FROM " />
+                <marker date="1476710953187" expanded="true" signature="7387:7427" ph="DELETE FROM " />
+                <marker date="1476710953187" expanded="true" signature="7387:7428" ph="DELETE FROM " />
               </folding>
             </state>
           </provider>
@@ -208,15 +214,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1476698195478</updated>
-      <workItem from="1476698197830" duration="4300000" />
+      <workItem from="1476698197830" duration="8974000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4300000" />
+    <option name="totallyTimeSpent" value="8974000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-13" y="-13" width="2762" height="1770" extended-state="7" />
+    <frame x="-13" y="-13" width="2762" height="1770" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.115497075" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -256,24 +262,32 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/connect.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="549">
-          <caret line="130" column="32" selection-start-line="130" selection-start-column="32" selection-end-line="130" selection-end-column="32" />
+        <state relative-caret-position="1229">
+          <caret line="249" column="1" selection-start-line="249" selection-start-column="1" selection-end-line="249" selection-end-column="1" />
           <folding>
-            <marker date="1476703728107" expanded="true" signature="1007:1026" ph="SELECT ${$qu... ${$table}" />
-            <marker date="1476703728107" expanded="true" signature="1939:1986" ph="SELECT ${$qu... ${$table}" />
-            <marker date="1476703728107" expanded="true" signature="2891:2909" ph="SELECT ${$qu... " />
-            <marker date="1476703728107" expanded="true" signature="2891:2910" ph="SELECT ${$qu... ${$table}" />
-            <marker date="1476703728107" expanded="true" signature="2891:2926" ph="SELECT ${$qu... ${$table}" />
-            <marker date="1476703728107" expanded="true" signature="2891:2945" ph="SELECT ${$qu... ${$table}" />
-            <marker date="1476703728107" expanded="true" signature="3007:3038" ph="SELECT ${$qu... ${$table}" />
-            <marker date="1476703728107" expanded="true" signature="3007:3042" ph="SELECT ${$qu... ${$table}" />
-            <marker date="1476703728107" expanded="true" signature="3007:3062" ph="SELECT ${$qu... ${$table}" />
-            <marker date="1476703728107" expanded="true" signature="3975:3994" ph="SELECT ${$qu... ${$table}" />
-            <marker date="1476703728107" expanded="true" signature="3975:4007" ph="SELECT ${$qu... ${$table}" />
-            <marker date="1476703728107" expanded="true" signature="3975:4008" ph="SELECT ${$qu... ${$table}" />
-            <marker date="1476703728107" expanded="true" signature="3975:4022" ph="SELECT ${$qu... ${$table}" />
-            <marker date="1476703728107" expanded="true" signature="3975:4057" ph="SELECT ${$qu... ${$table}" />
-            <marker date="1476703728107" expanded="true" signature="4093:4176" ph="SELECT ${$qu... ${$table}" />
+            <marker date="1476710953187" expanded="true" signature="1041:1060" ph="SELECT ${$qu... ${$table}" />
+            <marker date="1476710953187" expanded="true" signature="1933:1980" ph="SELECT ${$qu... ${$table}" />
+            <marker date="1476710953187" expanded="true" signature="2845:2863" ph="SELECT ${$qu... " />
+            <marker date="1476710953187" expanded="true" signature="2845:2864" ph="SELECT ${$qu... ${$table}" />
+            <marker date="1476710953187" expanded="true" signature="2845:2880" ph="SELECT ${$qu... ${$table}" />
+            <marker date="1476710953187" expanded="true" signature="2845:2899" ph="SELECT ${$qu... ${$table}" />
+            <marker date="1476710953187" expanded="true" signature="2967:2998" ph="SELECT ${$qu... ${$table}" />
+            <marker date="1476710953187" expanded="true" signature="2967:3002" ph="SELECT ${$qu... ${$table}" />
+            <marker date="1476710953187" expanded="true" signature="2967:3022" ph="SELECT ${$qu... ${$table}" />
+            <marker date="1476710953187" expanded="true" signature="3896:3915" ph="SELECT ${$qu... ${$table}" />
+            <marker date="1476710953187" expanded="true" signature="3896:3928" ph="SELECT ${$qu... ${$table}" />
+            <marker date="1476710953187" expanded="true" signature="3896:3929" ph="SELECT ${$qu... ${$table}" />
+            <marker date="1476710953187" expanded="true" signature="3896:3943" ph="SELECT ${$qu... ${$table}" />
+            <marker date="1476710953187" expanded="true" signature="3896:3978" ph="SELECT ${$qu... ${$table}" />
+            <marker date="1476710953187" expanded="true" signature="4020:4103" ph="SELECT ${$qu... ${$table}" />
+            <marker date="1476710953187" expanded="true" signature="5462:5492" ph="UPDATE ${$ta... " />
+            <marker date="1476710953187" expanded="true" signature="5462:5493" ph="UPDATE ${$ta... " />
+            <marker date="1476710953187" expanded="true" signature="5462:5508" ph="UPDATE ${$ta... " />
+            <marker date="1476710953187" expanded="true" signature="7387:7399" ph="DELETE FROM " />
+            <marker date="1476710953187" expanded="true" signature="7387:7411" ph="DELETE FROM " />
+            <marker date="1476710953187" expanded="true" signature="7387:7412" ph="DELETE FROM " />
+            <marker date="1476710953187" expanded="true" signature="7387:7427" ph="DELETE FROM " />
+            <marker date="1476710953187" expanded="true" signature="7387:7428" ph="DELETE FROM " />
           </folding>
         </state>
       </provider>

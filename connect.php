@@ -12,7 +12,8 @@ class dbconnect
 {
     public $qresult = array();
     private $con;
-    private $result;
+    private $sql;
+    private $err = "No connection is set. Please use the connect function first!";
 
     public function connect($host, $username, $password, $database)
     {
@@ -26,7 +27,7 @@ class dbconnect
     public function select(array $columns, $table)
     {
         if ($this->con == null) {
-            throw new ErrorException("No connection is set. Please use the connect function first!");
+            throw new ErrorException($this->err);
             return;
         }
         $query = "";
@@ -36,8 +37,8 @@ class dbconnect
             else
                 $query = $query . ", " . $columns[$i];
         }
-        $sql = "SELECT $query FROM $table";
-        $result = mysqli_query($this->con, $sql);
+        $this->sql = "SELECT $query FROM $table";
+        $result = mysqli_query($this->con, $this->sql);
         $row = mysqli_fetch_assoc($result);
 //        echo $row["plaatserid"];
 
@@ -54,7 +55,7 @@ class dbconnect
     {
         if($this->con == null)
         {
-            throw new ErrorException("No connection is set. Please use the connect function first!");
+            throw new ErrorException($this->err);
             return;
         }
 
@@ -66,8 +67,8 @@ class dbconnect
             else
                 $query = $query . ", " . $columns[$i];
         }
-        $sql = "SELECT $query FROM $table WHERE $columntocheck=$value";
-        $result = mysqli_query($this->con, $sql);
+        $this->sql = "SELECT $query FROM $table WHERE $columntocheck=$value";
+        $result = mysqli_query($this->con, $this->sql);
         $row = mysqli_fetch_assoc($result);
 
         $variables = array();
@@ -82,9 +83,9 @@ class dbconnect
     {
         if($this->con == null)
         {
-            throw new ErrorException("No connection is set. Please use the connect function first!");
+            throw new ErrorException($this->err);
+            return;
         }
-
         $query = "";
         for($i = 0; $i < count($columns); $i++)
         {
@@ -94,13 +95,12 @@ class dbconnect
                 $query = $query . ", " . $columns[$i];
         }
 
-        $sql = "";
         if($ASCorDESC === "ASC")
-            $sql = "SELECT $query FROM $table ORDER BY $columnto_order ASC";
+            $this->sql = "SELECT $query FROM $table ORDER BY $columnto_order ASC";
         else if($ASCorDESC === "DESC")
-            $sql = "SELECT $query FROM $table ORDER BY $columnto_order DESC";
+            $this->sql = "SELECT $query FROM $table ORDER BY $columnto_order DESC";
 
-        $result = mysqli_query($this->con, $sql);
+        $result = mysqli_query($this->con, $this->sql);
         $row = mysqli_fetch_assoc($result);
 
         $variables = array();
@@ -116,7 +116,8 @@ class dbconnect
     {
         if($this->con == null)
         {
-            throw new ErrorException("No connection is set. Please use the connect function first!");
+            throw new ErrorException($this->err);
+            return;
         }
 
         $query = "";
@@ -127,13 +128,12 @@ class dbconnect
             else
                 $query = $query . ", " . $columns[$i];
         }
-        $sql = "";
         if($ASCorDESC === "ASC")
-            $sql = "SELECT $query FROM $table WHERE $columntocheck=$value ORDER BY $columnto_order ASC";
+            $this->sql = "SELECT $query FROM $table WHERE $columntocheck=$value ORDER BY $columnto_order ASC";
         else
-            $sql = "SELECT $query FROM $table WHERE $columntocheck=$value ORDER BY $columnto_order DESC";
+            $this->sql = "SELECT $query FROM $table WHERE $columntocheck=$value ORDER BY $columnto_order DESC";
 
-        $result = mysqli_query($this->con, $sql);
+        $result = mysqli_query($this->con, $this->sql);
         $row = mysqli_fetch_assoc($result);
 
         $variables = array();
@@ -143,5 +143,108 @@ class dbconnect
 
         for($i = 0; $i < count($variables); $i++)
             $this->qresult[$i] = $variables[$i];
+    }
+
+    public function update($columns, $values, $table, $columntocheck, $value)
+    {
+        if($this->con == null)
+        {
+            throw new ErrorException($this->err);
+        }
+
+        if(count($columns) < count($values))
+        {
+            throw new ErrorException("To many values are given. Please make sure you have an equal amount of columns and values passing!");
+            return;
+        }
+        else if(count($columns) > count($values))
+        {
+            throw new ErrorException("To many columns are given. Please make sure you have an equal amount of columns and values passing!");
+            return;
+        }
+
+        $query = "";
+        for($i = 0; $i < count($columns); $i++)
+        {
+            if(strlen($query) == 0)
+            {
+                $query = $columns[$i] . "=" . "'" . $values[$i] . "'";
+            }
+            else
+            {
+                $query = $query . ", " . $columns[$i] . "=" . "'" . $values[$i] . "'";
+            }
+
+            $this->sql = "UPDATE $table SET $query WHERE $columntocheck=$value";
+            if(mysqli_query($this->con, $this->sql) != TRUE)
+                throw new ErrorException("Something went wrong, please review this error: " . mysqli_error($this->con));
+        }
+    }
+
+    public function insert($columns, $values, $table)
+    {
+        if($this->con == null)
+        {
+            throw new ErrorException($this->err);
+            return;
+        }
+
+        if(count($columns) < count($values))
+        {
+            throw new ErrorException("To many values are given. Please make sure you have an equal amount of columns and values passing!");
+            return;
+        }
+        else if(count($columns) > count($values))
+        {
+            throw new ErrorException("To many columns are given. Please make sure you have an equal amount of columns and values passing!");
+            return;
+        }
+
+        $columnquery = "";
+        for($i = 0; $i < count($columns); $i++)
+        {
+            if(strlen($columnquery) == 0)
+                $columnquery = $columns[$i];
+            else
+                $columnquery = $columnquery . ", " . $columns[$i];
+        }
+
+        $valuequery = "";
+        for($i = 0; $i < count($values); $i++)
+        {
+            if (strlen($valuequery) == 0)
+                $valuequery = "'" . $values[$i] . "'";
+            else
+                $valuequery = $valuequery . ", " . "'" . $values[$i] . "'";
+
+            $this->sql = "INSET INTO $table ($columnquery) VALUES ($valuequery)";
+
+            if(mysqli_query($this->con, $this->sql != TRUE))
+                throw new ErrorException("Something went wrong, please review this error: " . mysqli_error($this->con));
+        }
+    }
+
+    public function delete($columntocheck, $value, $table)
+    {
+        if($this->con == null)
+        {
+            throw new ErrorException($this->err);
+            return;
+        }
+
+        $this->sql = "DELETE FROM $table WHERE $columntocheck=$value";
+        if(mysqli_query($this->con, $this->sql) != TRUE)
+            throw new ErrorException("Something went wrong, please review this error: " . mysqli_error($this->con));
+    }
+
+    public function disconnect()
+    {
+        if($this->con == null)
+        {
+            throw new ErrorException($this->err);
+            return;
+        }
+
+        mysqli_close($this->con);
     }
 }
