@@ -13,6 +13,7 @@ class dbconnect
     public $qresult = array();
     private $con;
     private $result;
+
     public function connect($host, $username, $password, $database)
     {
         define('DB_HOST', $host);
@@ -22,16 +23,14 @@ class dbconnect
         $this->con = mysqli_connect(DB_HOST, DB_USERNAME, password, db);
     }
 
-    function select(array $columns, $table)
+    public function select(array $columns, $table)
     {
-        if($this->con == null)
-        {
-            throw new ErrorException("No connection is set. Please use the connect function first");
+        if ($this->con == null) {
+            throw new ErrorException("No connection is set. Please use the connect function first!");
             return;
         }
         $query = "";
-        for ($i = 0; $i < count($columns); $i++)
-        {
+        for ($i = 0; $i < count($columns); $i++) {
             if (strlen($query) == 0)
                 $query = $columns[$i];
             else
@@ -43,25 +42,19 @@ class dbconnect
 //        echo $row["plaatserid"];
 
         $variables = array();
-        for($i = 0; $i < count($row); $i++)
-        {
+        for ($i = 0; $i < count($row); $i++) {
             array_push($variables, $row[$columns[$i]]);
         }
 
-        for($i = 0; $i < count($variables); $i++)
-        {
+        for ($i = 0; $i < count($variables); $i++) {
             $this->qresult[$i] = $variables[$i];
         }
     }
-<<<<<<< HEAD
-}
-=======
-
-    function selectwhere(array $columns, $table, $columntocheck, $value)
+    public function selectwhere(array $columns, $table, $columntocheck, $value)
     {
         if($this->con == null)
         {
-            throw new ErrorException("No connection is set. Please use the connect function first");
+            throw new ErrorException("No connection is set. Please use the connect function first!");
             return;
         }
 
@@ -71,7 +64,7 @@ class dbconnect
             if(strlen($query) == 0)
                 $query = $columns[$i];
             else
-                $query = $query . ", " . $columns;
+                $query = $query . ", " . $columns[$i];
         }
         $sql = "SELECT $query FROM $table WHERE $columntocheck=$value";
         $result = mysqli_query($this->con, $sql);
@@ -82,7 +75,72 @@ class dbconnect
             array_push($variables, $row[$columns[$i]]);
 
         for($i = 0; $i < count($variables); $i++)
-            $this->qresult = $variables[$i];
+            $this->qresult[$i] = $variables[$i];
+    }
+
+    public function selectorderby(array $columns, $table, $columnto_order, $ASCorDESC = "ASC")
+    {
+        if($this->con == null)
+        {
+            throw new ErrorException("No connection is set. Please use the connect function first!");
+        }
+
+        $query = "";
+        for($i = 0; $i < count($columns); $i++)
+        {
+            if(strlen($query) == 0)
+                $query = $columns[$i];
+            else
+                $query = $query . ", " . $columns[$i];
+        }
+
+        if($ASCorDESC === "ASC")
+            $sql = "SELECT $query FROM $table ORDER BY $columnto_order ASC";
+        else if($ASCorDESC === "DESC")
+            $sql = "SELECT $query FROM $table ORDER BY $columnto_order DESC";
+
+        $result = mysqli_query($this->con, $sql);
+        $row = mysqli_fetch_assoc($result);
+
+        $variables = array();
+
+        for($i = 0; $i < count($row); $i++)
+            array_push($variables, $row[$columns[$i]]);
+
+        for($i = 0; $i < count($variables); $i++)
+            $this->qresult[$i] = $variables[$i];
+    }
+
+    public function selectwhereorder($columns, $table, $columntocheck, $value, $columto_order, $ASCorDESC)
+    {
+        if($this->con == null)
+        {
+            throw new ErrorException("No connection is set. Please use the connect function first!");
+        }
+
+        $query = "";
+        for($i = 0; $i < count($columns); $i++)
+        {
+            if(strlen($query) == 0)
+                $query = $columns[$i];
+            else
+                $query = $query . ", " . $columns[$i];
+        }
+
+        if($ASCorDESC === "ASC")
+            $sql = "SELECT $query FROM $table WHERE $columntocheck=$value ORDER BY ASC";
+        else
+            $sql = "SELECT $query FROM $table WHERE $columntocheck=$value ORDER BY DESC";
+
+        $result = mysqli_query($this->con, $sql);
+        $row = mysqli_fetch_assoc($result);
+
+        $variables = array();
+
+        for($i = 0; $i < count($row); $i++)
+            array_push($variables, $row[$columns[$i]]);
+
+        for($i = 0; $i < count($variables); $i++)
+            $this->qresult[$i] = $variables[$i];
     }
 }
->>>>>>> refs/remotes/origin/Small-expansion
