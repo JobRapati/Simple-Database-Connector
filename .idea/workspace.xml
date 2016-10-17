@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c677c10d-f969-43bc-b0ea-307a0e811e52" name="Default" comment="" />
+    <list default="true" id="c677c10d-f969-43bc-b0ea-307a0e811e52" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/connect.php" afterPath="$PROJECT_DIR$/connect.php" />
+    </list>
     <ignored path="Simple-Database-Connector.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -24,24 +29,24 @@
       <file leaf-file-name="connect.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/connect.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1389">
-              <caret line="143" column="48" selection-start-line="143" selection-start-column="48" selection-end-line="143" selection-end-column="48" />
+            <state relative-caret-position="549">
+              <caret line="130" column="32" selection-start-line="130" selection-start-column="32" selection-end-line="130" selection-end-column="32" />
               <folding>
-                <marker date="1476699431719" expanded="true" signature="1007:1026" ph="SELECT ${$qu... ${$table}" />
-                <marker date="1476699431719" expanded="true" signature="1939:1986" ph="SELECT ${$qu... ${$table}" />
-                <marker date="1476699431719" expanded="true" signature="2872:2890" ph="SELECT ${$qu... " />
-                <marker date="1476699431719" expanded="true" signature="2872:2891" ph="SELECT ${$qu... ${$table}" />
-                <marker date="1476699431719" expanded="true" signature="2872:2907" ph="SELECT ${$qu... ${$table}" />
-                <marker date="1476699431719" expanded="true" signature="2872:2926" ph="SELECT ${$qu... ${$table}" />
-                <marker date="1476699431719" expanded="true" signature="2988:3019" ph="SELECT ${$qu... ${$table}" />
-                <marker date="1476699431719" expanded="true" signature="2988:3023" ph="SELECT ${$qu... ${$table}" />
-                <marker date="1476699431719" expanded="true" signature="2988:3043" ph="SELECT ${$qu... ${$table}" />
-                <marker date="1476699431719" expanded="true" signature="3937:3956" ph="SELECT ${$qu... ${$table}" />
-                <marker date="1476699431719" expanded="true" signature="3937:3969" ph="SELECT ${$qu... ${$table}" />
-                <marker date="1476699431719" expanded="true" signature="3937:3970" ph="SELECT ${$qu... ${$table}" />
-                <marker date="1476699431719" expanded="true" signature="3937:3984" ph="SELECT ${$qu... ${$table}" />
-                <marker date="1476699431719" expanded="true" signature="3937:4003" ph="SELECT ${$qu... ${$table}" />
-                <marker date="1476699431719" expanded="true" signature="4039:4106" ph="SELECT ${$qu... ${$table}" />
+                <marker date="1476703728107" expanded="true" signature="1007:1026" ph="SELECT ${$qu... ${$table}" />
+                <marker date="1476703728107" expanded="true" signature="1939:1986" ph="SELECT ${$qu... ${$table}" />
+                <marker date="1476703728107" expanded="true" signature="2891:2909" ph="SELECT ${$qu... " />
+                <marker date="1476703728107" expanded="true" signature="2891:2910" ph="SELECT ${$qu... ${$table}" />
+                <marker date="1476703728107" expanded="true" signature="2891:2926" ph="SELECT ${$qu... ${$table}" />
+                <marker date="1476703728107" expanded="true" signature="2891:2945" ph="SELECT ${$qu... ${$table}" />
+                <marker date="1476703728107" expanded="true" signature="3007:3038" ph="SELECT ${$qu... ${$table}" />
+                <marker date="1476703728107" expanded="true" signature="3007:3042" ph="SELECT ${$qu... ${$table}" />
+                <marker date="1476703728107" expanded="true" signature="3007:3062" ph="SELECT ${$qu... ${$table}" />
+                <marker date="1476703728107" expanded="true" signature="3975:3994" ph="SELECT ${$qu... ${$table}" />
+                <marker date="1476703728107" expanded="true" signature="3975:4007" ph="SELECT ${$qu... ${$table}" />
+                <marker date="1476703728107" expanded="true" signature="3975:4008" ph="SELECT ${$qu... ${$table}" />
+                <marker date="1476703728107" expanded="true" signature="3975:4022" ph="SELECT ${$qu... ${$table}" />
+                <marker date="1476703728107" expanded="true" signature="3975:4057" ph="SELECT ${$qu... ${$table}" />
+                <marker date="1476703728107" expanded="true" signature="4093:4176" ph="SELECT ${$qu... ${$table}" />
               </folding>
             </state>
           </provider>
@@ -50,6 +55,7 @@
     </leaf>
   </component>
   <component name="Git.Settings">
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
@@ -71,6 +77,25 @@
     <option name="y" value="-13" />
     <option name="width" value="2762" />
     <option name="height" value="1770" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+          <State>
+            <id>SQL</id>
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>SQL</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -122,11 +147,59 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/AppData/Local/GitHub/PortableGit_284a859b0e6deba86edc624fef1e4db2aa8241a9/cmd/git.exe" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="settings.editor.selected.configurable" value="Errors" />
+    <property name="settings.editor.splitter.proportion" value="0.2" />
+    <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="project" working-dir="">
+      <method />
+    </configuration>
+    <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpBehatConfigurationType" factoryName="Behat">
+      <BehatRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run-script" />
+      <scripts />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="mocha-javascript-test-runner" factoryName="Mocha">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <working-directory />
+      <pass-parent-env>true</pass-parent-env>
+      <envs />
+      <ui />
+      <extra-mocha-options />
+      <test-kind>DIRECTORY</test-kind>
+      <test-directory />
+      <recursive>false</recursive>
+      <method />
+    </configuration>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -135,12 +208,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1476698195478</updated>
-      <workItem from="1476698197830" duration="1241000" />
+      <workItem from="1476698197830" duration="4300000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1241000" />
+    <option name="totallyTimeSpent" value="4300000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-13" y="-13" width="2762" height="1770" extended-state="7" />
@@ -183,24 +256,24 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/connect.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1389">
-          <caret line="143" column="48" selection-start-line="143" selection-start-column="48" selection-end-line="143" selection-end-column="48" />
+        <state relative-caret-position="549">
+          <caret line="130" column="32" selection-start-line="130" selection-start-column="32" selection-end-line="130" selection-end-column="32" />
           <folding>
-            <marker date="1476699431719" expanded="true" signature="1007:1026" ph="SELECT ${$qu... ${$table}" />
-            <marker date="1476699431719" expanded="true" signature="1939:1986" ph="SELECT ${$qu... ${$table}" />
-            <marker date="1476699431719" expanded="true" signature="2872:2890" ph="SELECT ${$qu... " />
-            <marker date="1476699431719" expanded="true" signature="2872:2891" ph="SELECT ${$qu... ${$table}" />
-            <marker date="1476699431719" expanded="true" signature="2872:2907" ph="SELECT ${$qu... ${$table}" />
-            <marker date="1476699431719" expanded="true" signature="2872:2926" ph="SELECT ${$qu... ${$table}" />
-            <marker date="1476699431719" expanded="true" signature="2988:3019" ph="SELECT ${$qu... ${$table}" />
-            <marker date="1476699431719" expanded="true" signature="2988:3023" ph="SELECT ${$qu... ${$table}" />
-            <marker date="1476699431719" expanded="true" signature="2988:3043" ph="SELECT ${$qu... ${$table}" />
-            <marker date="1476699431719" expanded="true" signature="3937:3956" ph="SELECT ${$qu... ${$table}" />
-            <marker date="1476699431719" expanded="true" signature="3937:3969" ph="SELECT ${$qu... ${$table}" />
-            <marker date="1476699431719" expanded="true" signature="3937:3970" ph="SELECT ${$qu... ${$table}" />
-            <marker date="1476699431719" expanded="true" signature="3937:3984" ph="SELECT ${$qu... ${$table}" />
-            <marker date="1476699431719" expanded="true" signature="3937:4003" ph="SELECT ${$qu... ${$table}" />
-            <marker date="1476699431719" expanded="true" signature="4039:4106" ph="SELECT ${$qu... ${$table}" />
+            <marker date="1476703728107" expanded="true" signature="1007:1026" ph="SELECT ${$qu... ${$table}" />
+            <marker date="1476703728107" expanded="true" signature="1939:1986" ph="SELECT ${$qu... ${$table}" />
+            <marker date="1476703728107" expanded="true" signature="2891:2909" ph="SELECT ${$qu... " />
+            <marker date="1476703728107" expanded="true" signature="2891:2910" ph="SELECT ${$qu... ${$table}" />
+            <marker date="1476703728107" expanded="true" signature="2891:2926" ph="SELECT ${$qu... ${$table}" />
+            <marker date="1476703728107" expanded="true" signature="2891:2945" ph="SELECT ${$qu... ${$table}" />
+            <marker date="1476703728107" expanded="true" signature="3007:3038" ph="SELECT ${$qu... ${$table}" />
+            <marker date="1476703728107" expanded="true" signature="3007:3042" ph="SELECT ${$qu... ${$table}" />
+            <marker date="1476703728107" expanded="true" signature="3007:3062" ph="SELECT ${$qu... ${$table}" />
+            <marker date="1476703728107" expanded="true" signature="3975:3994" ph="SELECT ${$qu... ${$table}" />
+            <marker date="1476703728107" expanded="true" signature="3975:4007" ph="SELECT ${$qu... ${$table}" />
+            <marker date="1476703728107" expanded="true" signature="3975:4008" ph="SELECT ${$qu... ${$table}" />
+            <marker date="1476703728107" expanded="true" signature="3975:4022" ph="SELECT ${$qu... ${$table}" />
+            <marker date="1476703728107" expanded="true" signature="3975:4057" ph="SELECT ${$qu... ${$table}" />
+            <marker date="1476703728107" expanded="true" signature="4093:4176" ph="SELECT ${$qu... ${$table}" />
           </folding>
         </state>
       </provider>

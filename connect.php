@@ -94,6 +94,7 @@ class dbconnect
                 $query = $query . ", " . $columns[$i];
         }
 
+        $sql = "";
         if($ASCorDESC === "ASC")
             $sql = "SELECT $query FROM $table ORDER BY $columnto_order ASC";
         else if($ASCorDESC === "DESC")
@@ -111,7 +112,7 @@ class dbconnect
             $this->qresult[$i] = $variables[$i];
     }
 
-    public function selectwhereorder($columns, $table, $columntocheck, $value, $columto_order, $ASCorDESC)
+    public function selectwhereorder($columns, $table, $columntocheck, $value, $columnto_order, $ASCorDESC)
     {
         if($this->con == null)
         {
@@ -126,11 +127,11 @@ class dbconnect
             else
                 $query = $query . ", " . $columns[$i];
         }
-
+        $sql = "";
         if($ASCorDESC === "ASC")
-            $sql = "SELECT $query FROM $table WHERE $columntocheck=$value ORDER BY ASC";
+            $sql = "SELECT $query FROM $table WHERE $columntocheck=$value ORDER BY $columnto_order ASC";
         else
-            $sql = "SELECT $query FROM $table WHERE $columntocheck=$value ORDER BY DESC";
+            $sql = "SELECT $query FROM $table WHERE $columntocheck=$value ORDER BY $columnto_order DESC";
 
         $result = mysqli_query($this->con, $sql);
         $row = mysqli_fetch_assoc($result);
